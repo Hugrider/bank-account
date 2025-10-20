@@ -1,0 +1,42 @@
+.accountStatement{
+    h2{
+        margin-bottom: 0px;
+    }
+    .balance {
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    .operations {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        max-height: 550px;
+        overflow-y: auto;
+        .operation{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            .info{
+                display: flex;
+                flex-direction: column;
+            }
+            .type{
+                font-weight: 500;
+            }
+            .date{
+                font-size: 0.8rem;
+                font-weight: 300;
+            }
+            .amount{
+                font-size: 1rem;
+                font-weight: 500;
+                
+            }
+        }
+    }
+}

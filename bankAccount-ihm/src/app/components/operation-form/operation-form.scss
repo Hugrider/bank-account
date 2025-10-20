@@ -1,0 +1,37 @@
+.operation-form {
+
+    .form {
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 10px;
+            .form-label {
+                font-size: 0.9rem;
+            }
+
+            .form-input,
+            .form-select {
+                padding: 8px 10px;
+                border-radius: 10px;
+               border: 1px solid rgba(0, 0, 0, 0.237);
+            }
+        } 
+    }
+
+    .button-container {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+
+        .deposit {
+            width: 100%;
+            background-color: rgb(86, 203, 86);
+        }
+
+        .withdraw {
+            width: 100%;
+            background-color: rgb(249, 87, 87); 
+        }
+    }
+}

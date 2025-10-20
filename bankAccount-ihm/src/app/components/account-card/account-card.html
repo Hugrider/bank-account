@@ -1,0 +1,5 @@
+<div class="account-card" (click)="onClick()">
+    <span class="title">{{ account.type | accountName}}</span>
+    <span class="number">{{ account.number }}</span>
+    <span class="amount">{{ account.balance | currency: 'EUR': 'symbol':'1.2-2'}}</span>
+</div>

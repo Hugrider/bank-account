@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: ./bankAccount
+      dockerfile: ../docker/backend.Dockerfile
+    container_name: bank-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - ALLOWED_ORIGIN=http://localhost:4200
+    networks:
+      - bank-net
+
+  frontend:
+    build:
+      context: ./bankAccount-ihm
+      dockerfile: ../docker/frontend.Dockerfile
+    container_name: bank-frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - bank-net
+
+networks:
+  bank-net:
+    driver: bridge

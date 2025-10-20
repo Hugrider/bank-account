@@ -1,0 +1,39 @@
+.account-card{
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid rgba(57, 57, 57, 0.112);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(88, 88, 88, 0.219);
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        box-shadow: 0px 0px 15px 0px rgba(88, 88, 88, 0.419);
+    }
+    
+    &.active {
+        background-color: rgb(97, 93, 93);
+    }
+
+    .title{
+        font-size: 1.2rem;
+    }
+
+    .number{
+        font-size: 0.8rem;
+        color: gray;
+    }
+
+    .amount{
+        height: 100%;
+        text-align: right;
+        margin-top: 25px;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+}

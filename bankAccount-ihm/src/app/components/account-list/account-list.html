@@ -1,0 +1,14 @@
+<div class="accounts">
+    <h2>Comptes classiques</h2>
+    <div class="list">
+        @for (account of checkingAccounts; track account.number) {
+            <app-account-card [account]="account" (select)="onAccountSelected($event)"/>
+        }
+    </div>
+    <h2>Comptes épargnes</h2>
+    <div class="list">
+        @for (account of savingsAccounts; track account.number) {
+            <app-account-card [account]="account" (select)="onAccountSelected($event)"/>
+        }
+    </div>
+</div>

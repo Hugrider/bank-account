@@ -1,0 +1,35 @@
+<div class="operation-form">
+    <h2>Effectuer une opération</h2>
+
+    <form class="form" [formGroup]="operationForm">
+      <div class="field">
+        <span class="form-label">Compte :</span>
+        <select class="form-select" formControlName="accountNumber">
+          <option [value]="null">-- Sélectionner un compte --</option>
+          @for (account of accounts; track account.number) {
+            <option [value]="account.number">{{ account.number }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <span class="form-label">Montant (€) :</span>
+        <input
+          id="amountInput"
+          type="number"
+          min="0"
+          class="form-input"
+          formControlName="amount"
+          placeholder="Saisir un montant" />
+      </div>
+    </form>
+
+    <div class="button-container">
+      <button class="deposit button" (click)="onDeposit()">Dépôt</button>
+      <button class="button withdraw" (click)="onWithdraw()">Retrait</button>
+    </div>
+
+    @if (message) {
+      <p>{{ message }}</p>
+    }
+</div>

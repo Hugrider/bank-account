@@ -1,0 +1,9 @@
+<div class="board">
+        <div class="left-pane">
+            <app-account-list [accounts]="accounts" (selected)="onAccountSelected($event)"/>
+        </div>
+        <div class="right-pane">
+            <app-operation-form [accounts]="accounts"/>
+            <app-account-statement [accountNumber]="selectedAccount"></app-account-statement>
+        </div>
+</div>
